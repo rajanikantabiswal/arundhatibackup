@@ -1,0 +1,51 @@
+.socialbar{
+  position:fixed;
+  height:auto;
+  top:40vh;
+
+}
+.socialbar a {
+  color:#000;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  text-decoration: none;
+  
+
+}
+.socialbar ion-icon{
+  font-size:26px;
+  padding:10px;
+}
+.socialbar span{
+  position:absolute;
+  left:100px;
+  padding:8px 15px;
+  transition: all .5s;
+  opacity:0;
+}
+
+.socialbar a:hover span{
+  opacity:1;
+  left:65px;
+
+}
+
+.socialbar span:after{
+  content:'';
+  position:absolute;
+  top:9px;
+  left:-20px;
+  border-left:10px solid transparent;
+  border-right:10px solid;
+  border-bottom:10px solid transparent;
+  border-top:10px solid transparent;
+}
+.facebook *{
+  background: #3b5998;
+  border-top-right-radius:5px;
+}
+.socialbar .facebook span:after{
+  border-right-color:#3b5998;
+}
+
