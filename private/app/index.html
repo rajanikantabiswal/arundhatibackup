@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arundhati Jewellers App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      body {
+        position: relative;
+        background-image: url("./images/pattern.webp");
+        background-repeat: repeat;
+        background-size: 150%;
+        background-attachment: fixed;
+      }
+      body::before {
+        content: "";
+        position: absolute;
+        inset: 0; /* top:0; right:0; bottom:0; left:0 */
+        background: rgba(255, 255, 255, 0.9); /* adjust opacity */
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+      }
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);
+      }
+      .nav-item {
+        transition: all 0.2s ease;
+      }
+      .nav-item:active {
+        transform: scale(0.95);
+      }
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+      .social-media-wrapper {
+        box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+
+    <!-- jewelloNavigation.js -->
+    <script src="jewelloNavigation.js"></script>
+  </head>
+  <body class="min-h-screen">
+    <!-- Header -->
+    <header class="bg-[#ed1d24] text-white shadow-lg">
+      <div class="flex items-center justify-between p-4">
+        <div class="flex items-center space-x-3">
+          <div class="w-[30%]">
+            <img src="./images/icons/logo.png" alt="" />
+          </div>
+          <!-- <h1 class="text-xl font-bold">Arundhati Jewellers</h1> -->
+        </div>
+        <div class="flex items-center space-x-3">
+          <div class="bg-white/20 p-2 rounded-full">
+            <i class="fas fa-bell text-lg"></i>
+          </div>
+          <div class="bg-white/20 p-2 rounded-full">
+            <i class="fa-solid fa-arrow-right-from-bracket text-lg"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="p-4">
+      <div class="rounded-xl overflow-hidden shadow-lg">
+        <img src="./images/gold-saving.jpg" alt="" class="w-full" />
+      </div>
+    </section>
+    <!-- <section class="gradient-red-light p-4 mx-4 mt-4 rounded-xl shadow-lg">
+      <div class="flex items-center justify-between">
+        <div>
+          <h2 class="text-red-800 text-lg font-bold mb-1">
+            Save Smart, Shine Bright!
+          </h2>
+          <p class="text-red-600 text-sm">
+            Start your jewelry savings journey today
+          </p>
+          <button
+            class="mt-3 bg-[#ed1d24] text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-red-700 transition-colors"
+          >
+            Get Started
+          </button>
+        </div>
+        <div class="text-6xl text-red-300">
+          <i class="fas fa-coins"></i>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Navigation Grid -->
+    <section class="p-4">
+      <h3 class="text-lg font-bold text-gray-800 mb-4">Services</h3>
+      <div class="grid grid-cols-3 gap-4">
+        <!-- Rate -->
+        <button
+          onclick="navigateToRate()"
+          class="nav-item backdrop-blur rounded-xl p-2 py-4 shadow-md text-center card-hover"
+        >
+          <div
+            class="bg-red-200 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2"
+          >
+            <i class="fas fa-chart-bar text-red-600 text-xl"></i>
+          </div>
+          <p class="text-sm font-medium text-gray-800">Rate</p>
+        </button>
+
+        <!-- Scheme -->
+        <button
+          onclick="navigateToScheme()"
+          class="nav-item backdrop-blur rounded-xl p-2 py-4 shadow-md text-center card-hover"
+        >
+          <div
+            class="bg-red-200 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2"
+          >
+            <i class="fas fa-calendar-alt text-red-600 text-xl"></i>
+          </div>
+          <p class="text-sm font-medium text-gray-800">Scheme</p>
+        </button>
+
+        <!-- Add KYC -->
+        <button
+          onclick="navigateToKyc()"
+          class="nav-item backdrop-blur rounded-xl p-2 py-4 shadow-md text-center card-hover"
+        >
+          <div
+            class="bg-red-200 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2"
+          >
+            <i class="fas fa-id-card text-red-600 text-xl"></i>
+          </div>
+          <p class="text-sm font-medium text-gray-800">Add KYC</p>
+        </button>
+
+        <!-- Bank Details -->
+        <button
+          onclick="navigateToBankDetails()"
+          class="nav-item backdrop-blur rounded-xl p-2 py-4 shadow-md text-center card-hover"
+        >
+          <div
+            class="bg-red-200 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2"
+          >
+            <i class="fas fa-university text-red-600 text-xl"></i>
+          </div>
+          <p class="text-sm font-medium text-gray-800">Bank Details</p>
+        </button>
+
+        <!-- My Card -->
+        <button
+          onclick="navigateToCustomerCard()"
+          class="nav-item backdrop-blur rounded-xl p-2 py-4 shadow-md text-center card-hover"
+        >
+          <div
+            class="bg-red-200 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2"
+          >
+            <i class="fas fa-credit-card text-red-600 text-xl"></i>
+          </div>
+          <p class="text-sm font-medium text-gray-800">My Card</p>
+        </button>
+
+        <!-- Online Transaction -->
+        <button
+          class="nav-item backdrop-blur rounded-xl p-2 py-4 shadow-md text-center card-hover"
+        >
+          <div
+            class="bg-red-200 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2"
+          >
+            <i class="fas fa-mobile-alt text-red-600 text-xl"></i>
+          </div>
+          <p class="text-sm font-medium text-gray-800">Pay Online</p>
+        </button>
+
+        <!-- My Orders -->
+        <button
+          onclick="navigateToMyOrder()"
+          class="nav-item backdrop-blur rounded-xl shadow-md p-2 py-4 text-center card-hover"
+        >
+          <div
+            class="bg-red-200 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2"
+          >
+            <i class="fa-regular fa-rectangle-list text-red-600 text-xl"></i>
+          </div>
+          <p class="text-sm font-medium text-gray-800">My Orders</p>
+        </button>
+
+        <!-- Transaction History -->
+        <button
+          onclick="navigateTransactionHistory()"
+          class="nav-item backdrop-blur rounded-xl p-2 py-4 shadow-md text-center card-hover"
+        >
+          <div
+            class="bg-red-200 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2"
+          >
+            <i class="fa-solid fa-clock-rotate-left text-red-600 text-xl"></i>
+          </div>
+          <p class="text-sm font-medium text-gray-800 text-center">
+            Transactions
+          </p>
+        </button>
+
+        <!-- Profile -->
+        <button
+          onclick="navigateToUserProfile()"
+          class="nav-item backdrop-blur rounded-xl p-2 py-4 shadow-md text-center card-hover"
+        >
+          <div
+            class="bg-red-200 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2"
+          >
+            <i class="fa-solid fa-user text-red-600 text-xl"></i>
+          </div>
+          <p class="text-sm font-medium text-gray-800">Profile</p>
+        </button>
+      </div>
+    </section>
+
+    <!--Tihar Collections Banner -->
+    <section class="px-4 pb-4">
+      <div class="rounded-xl overflow-hidden shadow-md">
+        <a
+          href="https://www.arundhatijewellers.com/shop/product-category/gold/tihar-collections/"
+        >
+          <img src="./images/tihar-banner-app.jpg" alt="" class="w-full" />
+        </a>
+      </div>
+    </section>
+
+    <!-- Collections -->
+    <section class="px-4 pb-4">
+      <h3 class="text-lg font-bold text-gray-800 mb-4">Collections</h3>
+      <div class="grid grid-cols-3 gap-4 place-items-center">
+        <a
+          class="text-center bg-gradient-to-r from-red-200 via-red-50 to-red-100 rounded-lg px-2 py-3 uppercase font-semibold text-red-600 w-full"
+          href="https://www.arundhatijewellers.com/shop/product-category/gold/arka-collections/"
+          >Arka</a
+        >
+        <a
+          class="text-center bg-gradient-to-r from-red-200 via-red-50 to-red-100 rounded-lg px-2 py-3 uppercase font-semibold text-red-600 w-full"
+          href="https://www.arundhatijewellers.com/shop/ameya-collections/"
+          >Ameyaa</a
+        >
+        <a
+          class="text-center bg-gradient-to-r from-red-200 via-red-50 to-red-100 rounded-lg px-2 py-3 uppercase font-semibold text-red-600 w-full"
+          href="https://www.arundhatijewellers.com/shop/product-category/diamond/necklace-diamond/"
+          >Zivah</a
+        >
+        <a
+          class="text-center bg-gradient-to-r from-red-200 via-red-50 to-red-100 rounded-lg px-2 py-3 uppercase font-semibold text-red-600 w-full"
+          href="#"
+          >Aadya</a
+        >
+        <a
+          class="text-center bg-gradient-to-r from-red-200 via-red-50 to-red-100 rounded-lg px-2 py-3 uppercase font-semibold text-red-600 w-full"
+          href="https://www.arundhatijewellers.com/shop/product-category/shagun-collections/"
+          >Shagun</a
+        >
+        <a
+          class="text-center bg-gradient-to-r from-red-200 via-red-50 to-red-100 rounded-lg px-2 py-3 uppercase font-semibold text-red-600 w-full"
+          href="#"
+          >Riwaz</a
+        >
+      </div>
+    </section>
+
+    <!--Categories-->
+    <section class="px-4 pb-4">
+      <h3 class="text-lg font-bold text-gray-800 mb-4">Categories</h3>
+      <div class="grid grid-cols-4 gap-4">
+        <a
+          href="https://www.arundhatijewellers.com/shop/product-category/gold/ring/"
+          class="rounded-lg bg-black text-white overflow-hidden"
+        >
+          <img src="./images/categories/rings.jpg" alt="" class="w-full" />
+          <h3 class="text-xs text-center">Rings</h3>
+        </a>
+        <a
+          href="https://www.arundhatijewellers.com/shop/product-category/gold/necklace/"
+          class="rounded-lg bg-black text-white overflow-hidden"
+        >
+          <img src="./images/categories/necklace.jpg" alt="" class="w-full" />
+          <h3 class="text-xs text-center">Necklace</h3>
+        </a>
+        <a
+          href="https://www.arundhatijewellers.com/shop/product-category/gold/ear-ring/"
+          class="rounded-lg bg-black text-white overflow-hidden"
+        >
+          <img src="./images/categories/earrings.jpg" alt="" class="w-full" />
+          <h3 class="text-xs text-center">Earrings</h3>
+        </a>
+        <a
+          href="https://www.arundhatijewellers.com/shop/product-category/gold/chain/"
+          class="rounded-lg bg-black text-white overflow-hidden"
+        >
+          <img src="./images/categories/chain.jpg" alt="" class="w-full" />
+          <h3 class="text-xs text-center">Chains</h3>
+        </a>
+        <a
+          href="https://www.arundhatijewellers.com/shop/product-category/gold/bangle/"
+          class="rounded-lg bg-black text-white overflow-hidden"
+        >
+          <img src="./images/categories/bangle.jpg" alt="" class="w-full" />
+          <h3 class="text-xs text-center">Bangles</h3>
+        </a>
+      </div>
+    </section>
+
+    <!-- Bottom Navigation -->
+    <!-- <nav
+      class="fixed bottom-0 left-0 right-0 bg-red-600 text-white border-t border-gray-200 shadow-lg"
+    >
+      <div class="grid grid-cols-6 py-1">
+        <a
+          href="https://www.facebook.com/ArundhatiJewellersPvtLtd"
+          class="flex flex-col items-center py-1 text-red-600"
+        >
+          <i class="fab fa-facebook text-white text-3xl"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/arundhatijewellersofficial"
+          class="flex flex-col items-center py-1"
+        >
+          <i class="fab fa-instagram text-white text-3xl"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/company/arundhati-jewellers-pvt-ltd/"
+          class="flex flex-col items-center py-1"
+        >
+          <i class="fab fa-linkedin text-white text-3xl"></i>
+        </a>
+        <a
+          href="https://x.com/ArundhatiJewel"
+          class="flex flex-col items-center py-1"
+        >
+          <i class="fa-brands fa-x-twitter text-white text-3xl"></i>
+        </a>
+        <a
+          href="https://api.whatsapp.com/send?phone=919078885541&text=Hello%2C%20I%20want%20to%20enquire%20about%20a%20jewellery%20product."
+          class="flex flex-col items-center py-1"
+        >
+          <i class="fab fa-whatsapp text-white text-3xl"></i>
+        </a>
+        <a
+          href="https://www.youtube.com/@ArundhatiJewellers"
+          class="flex flex-col items-center py-1"
+        >
+          <i class="fa-brands fa-youtube text-white text-3xl"></i>
+        </a>
+      </div>
+    </nav> -->
+
+    <!-- Spacer for bottom navigation -->
+    <!-- <div class="h-20"></div> -->
+
+    <script>
+      // Add click animations and interactions
+      document.querySelectorAll(".nav-item").forEach((item) => {
+        item.addEventListener("click", function () {
+          // Add ripple effect
+          const ripple = document.createElement("div");
+          ripple.className =
+            "absolute inset-0 bg-red-200 rounded-xl opacity-0 animate-pulse";
+          this.style.position = "relative";
+          this.appendChild(ripple);
+
+          setTimeout(() => {
+            ripple.remove();
+          }, 300);
+        });
+      });
+
+      // Add notification bell animation
+      const bellIcon = document.querySelector(".fa-bell");
+      setInterval(() => {
+        bellIcon.classList.add("animate-bounce");
+        setTimeout(() => {
+          bellIcon.classList.remove("animate-bounce");
+        }, 1000);
+      }, 30000);
+    </script>
+  </body>
+</html>
