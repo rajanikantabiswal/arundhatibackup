@@ -20,12 +20,12 @@ RewriteRule . /shop/index.php [L]
 # END WordPress
 
 # Wordfence WAF
-<IfModule LiteSpeed>
-php_value auto_prepend_file '/home/vczfhphf/public_html/shop/wordfence-waf.php'
-</IfModule>
-<IfModule lsapi_module>
-php_value auto_prepend_file '/home/vczfhphf/public_html/shop/wordfence-waf.php'
-</IfModule>
+# <IfModule LiteSpeed>
+# php_value auto_prepend_file '/home/vczfhphf/public_html/shop/wordfence-waf.php'
+# </IfModule>
+# <IfModule lsapi_module>
+# php_value auto_prepend_file '/home/vczfhphf/public_html/shop/wordfence-waf.php'
+# </IfModule>
 <Files ".user.ini">
 <IfModule mod_authz_core.c>
 	Require all denied
