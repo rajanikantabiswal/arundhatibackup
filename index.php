@@ -3,7 +3,7 @@
 // Define banners
 $hero_banners = [
 	[
-		'desktop' => 'assets/img/hero/banner/new-wedding-offer.jpg',
+		'desktop' => null,
 		'mobile' => 'assets/img/hero/banner/m-new-wedding-offer.jpg',
 		'link' => null,
 	],
