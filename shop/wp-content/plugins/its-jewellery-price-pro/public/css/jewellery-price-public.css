@@ -1,0 +1,86 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+/* Custom CSS for Price Breakup Table */
+
+.itsjp-pbt1-container {
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    overflow-x: auto; /* Allows horizontal scroll on small screens */
+}
+
+/* Base styles for the table */
+.its-price-breakup-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 16px; /* Base font size */
+}
+
+.its-price-breakup-table th,
+.its-price-breakup-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.its-price-breakup-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.its-price-breakup-table td.left-align {
+    text-align: left;
+}
+
+.its-price-breakup-table td.right-align {
+    text-align: right;
+}
+
+.its-price-breakup-table td[colspan="4"] {
+    text-align: center;
+    font-weight: bold;
+    background-color: #f4f4f4;
+}
+
+.its-price-breakup-table .woocommerce-Price-amount {
+    font-weight: bold;
+}
+
+.its-price-breakup-table .woocommerce-Price-currencySymbol {
+    font-weight: normal;
+}
+
+.its-price-breakup-table .strike {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.its-price-breakup-table .its-total-row td {
+    font-weight: bold;
+    background-color: #f9f9f9;
+}
+
+.itsjp-pbt1-container p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.itsjp-pbt1-container p strong {
+    font-weight: bold;
+    color: #333;
+}
+
+
+.itsjp-onfra {
+   
+    color: #2b158d; 
+  }

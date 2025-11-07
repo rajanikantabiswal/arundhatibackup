@@ -1,0 +1,455 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+ :root
+{
+    --its-primary: #0096CC;
+    --its-primary-dark-text:#1d2327;
+    --its-primary-light-text:#fff;
+    --its-secondary: #ebe9eb;
+    --its-secondary-text: #515151;
+    --its-highlight: #fff;
+    --its-highligh-text: #0096CC;
+    --its-content-bg: #fff;
+    --its-subtext: #767676; 
+    --its-error-red: #D72C2C;
+  }
+
+.its-title-h3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-family: 'Roboto',sans-serif;
+  }
+  .its-title
+  {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.6;
+    font-family: 'Roboto',sans-serif;
+  }
+  .its-title-h5 {
+    font-family: 'Roboto',sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+  .its-para {
+    font-size: 1rem;
+    line-height: 25px;
+    font-family: 'Roboto',sans-serif;
+  }
+
+  .its-para.notes {
+    background: #0096cc14;
+    padding: 10px;
+    width: 80%;
+    color: #0096cc;
+}
+
+  .its-code code {
+    color: var(--its-primary) !important;
+    word-wrap: break-word !important;
+    background-color: unset !important;
+    font-size: 1rem;
+}
+  tbody, td, tfoot, th, thead, tr {
+    border: 1px solid rgb(206, 206, 206) !important;
+    background: #fff !important;
+    font-size: 13px;
+    /* padding: 1rem !important; */
+  }
+  .dataTables_scrollBody {
+    max-height: 470px !important;
+}
+  .btn-check:focus+.btn, .btn:focus {
+    outline: 0;
+    box-shadow: unset !important;
+}
+.its-btn-success{
+  background: var(--its-primary);
+  color:var(--its-primary-light-text);
+  border-color: var(--its-primary);
+}
+.its-btn-success:hover
+{
+  color:var(--its-primary-light-text);
+  background: var(--its-primary);
+  }
+  .its-btn-success:focus
+{
+  color:var(--its-primary-light-text);
+  background: var(--its-primary);
+  }
+  .its-btn-success:active
+{
+  color:var(--its-primary-light-text);
+  background: var(--its-primary);
+  }
+.its-primary-button
+{
+  background: var(--its-primary);
+  color:var(--its-primary-light-text);
+  border-color: var(--its-primary);
+}
+.its-primary-button:hover
+{
+  color:var(--its-primary-light-text);
+}
+
+/* header  */
+.its-logo-icon {
+  width: 50px;
+}
+.its-logo-text {
+  margin-left: 10px;
+  font-weight: 800;
+  font-size: 1.4rem;
+}
+.btn.its-primary-button a {
+  color: var(--its-primary-light-text) !important;
+  text-decoration: none;
+}
+.btn.its-primary-button:focus {
+  color: var(--its-primary-light-text);
+}
+.navbar.navbar-light.bg-light.its-header {
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 0 1px 0 rgba(24, 94, 224, 0.15), 0 6px 12px 0 rgba(24, 94, 224, 0.15);
+}
+/* footer */
+.row.its-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 2px solid #eee;
+  background: #f9f9f9;
+  /* padding: 15px 0px 0px 0px; */
+}
+.its-footer-para {
+  text-align: center;
+ 
+  z-index: 1;
+  padding:0.7rem 0rem;
+  margin:0px;
+}
+/* alert notification */
+
+.alert-warning {
+  color:var(--its-primary-light-text);
+  background-color: var(--its-primary);
+  border-color:var(--its-primary);
+}
+.form-control:disabled, .form-control[readonly] {
+  background-color: var(--its-primary-light-text);
+  opacity: 1;
+}
+input[type=text]:focus
+{
+  border-color: unset !important;
+  box-shadow: 0 0 0 0px #2271b1 !important;
+  outline: 0px solid transparent !important;
+}
+a:focus
+{
+  box-shadow: unset !important;
+outline: unset;
+}
+  
+/* Price Setting css */
+.card-header.its-price-setting {
+  font-size: 30px;
+  font-weight: 800;
+  font-family: 'Roboto',sans-serif;
+  background-color: unset;
+  padding: .5rem 0rem;
+}
+.its-span{
+  color:var(--its-highligh-text);
+}
+.card-body.its-card-body {
+  padding: 1rem 0rem;
+}
+.its-jp-edit-btn {
+  background:var(--its-primary) !important;
+  border-color: var(--its-primary) !important;
+  color:var(--its-primary-light-text) !important;
+}
+.its-jp-edit-btn:hover
+{
+color:var(--its-primary-light-text);
+}
+
+/* metal price log */
+.dataTables_wrapper .dataTables_length select {
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  padding: 5px;
+  background-color: transparent;
+  padding: 4px;
+  width: 50px;
+}
+.wp-core-ui select:focus {
+  border-color: unset;
+  color: #0a4b78;
+  box-shadow: unset;
+}
+div#its_jp_metal_price_log_filter {
+  margin-bottom: 10px;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  color: white !important;
+  border: 1px solid var(--its-primary);
+  background-color: #585858;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #585858), color-stop(100%, #111));
+  background: -webkit-linear-gradient(top, #585858 0%, #111 100%);
+  background: -moz-linear-gradient(top, #585858 0%, #111 100%);
+  background: -ms-linear-gradient(top, #585858 0%, #111 100%);
+  background: -o-linear-gradient(top, #585858 0%, #111 100%);
+  background: linear-gradient(to bottom, #0096cc 0%, #09769d 100%);
+}
+.dataTables_wrapper .dataTables_scroll {
+  clear: both;
+  margin-bottom: 10px !important;
+}
+
+/* product log */
+div#its_jp_product_price_log_filter {
+    margin-bottom: 10px;
+}
+
+/* general setting */
+
+.nav-tab-wrapper.its-main-tab {
+  background: var(--its-content-bg);
+  padding: 1rem !important;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  border-bottom:0px !important;
+  box-shadow: 0 0 1px 0 rgba(24, 94, 224, 0.15), 0 6px 12px 0 rgba(24, 94, 224, 0.15);
+}
+.nav-tab.its-tabnav-tab-active {
+  background: var(--its-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  color: var(--its-primary-light-text);
+  border: 0px;
+}
+.nav-tab.its-tab {
+  background: var(--its-content-bg);
+  border: 0px;
+  padding: 0.5rem 1rem;
+}
+
+/* promo sidebar */
+/* .its-sidebar__product {
+  background: var(--its-primary);
+  border-radius: 8px;
+  color: #fff;
+  margin-top: 70px;
+  padding: 24px;
+} */
+.its-product-image
+{
+  text-align: center;
+}
+.its-sidebar__product {
+  border: 2px solid #eee;
+  border-radius: 8px;
+  color: var(--its-primary-dark-text) ;
+  margin-top: 100px;
+  padding: 24px;
+  background: var(--its-content-bg);
+  box-shadow: 0 0 1px 0 rgba(24, 94, 224, 0.15), 0 6px 12px 0 rgba(24, 94, 224, 0.15);
+}
+.its-sidebar-icon {
+  margin-top: -80px;
+  border: 3px solid #eee;
+  border-radius: 50%;
+}
+.its-sidebar-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.4;
+  font-family: 'Roboto',sans-serif;
+  color: var(--its-primary-dark-text);
+}
+.its-promo-banner
+{
+  width:100%;
+}
+.its-license-section
+{
+  background-color: #fff;
+padding: 24px;
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05), 0px 4px 5px rgba(0, 0, 0, 0.05);
+margin-bottom: 12px;
+}
+.its-para.mt-2 {
+  line-height: 160%;
+  color: #8C8F9A;
+}
+.alert-success {
+  color: var(--its-primary-light-text);
+  background-color: var(--its-primary);
+  border-color: #badbcc;
+}
+p.its-status-text{
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.its-primary {
+  color: var(--its-primary);
+ 
+}
+
+/* Progress container and bar */
+#progress-bar-container,
+#single-progress-bar-container {
+  width: 50%;
+  height: 20px;
+  background-color: var(--its-secondary);
+  margin-top: 20px;
+  position: relative;
+  display: none;
+}
+
+#progress-bar,
+#single-progress-bar {
+  height: 100%;
+  width: 50%;
+  background-color: var(--its-primary);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+  
+}
+
+/* Switch style input checkbox */
+/* Hide default checkbox */
+.itsjp-input input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Switch container */
+.itsjp-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px; /* Reduced width */
+  height: 20px; /* Reduced height */
+}
+
+/* Slider */
+.itsjp-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 20px; /* Reduced border-radius */
+}
+
+/* Checkbox checked style */
+.itsjp-input-check[type="checkbox"]:checked + .itsjp-slider {
+  background-color: #2196F3;
+}
+
+/* Rounded sliders */
+.itsjp-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px; /* Reduced height */
+  width: 16px; /* Reduced width */
+  left: 2px; /* Adjusted position */
+  bottom: 2px; /* Adjusted position */
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+/* Checkbox checked style */
+.itsjp-input-check[type="checkbox"]:checked + .itsjp-slider:before {
+  transform: translateX(20px); /* Adjusted translation */
+}
+
+/* Rounded corners on the slider */
+.itsjp-slider.round {
+  border-radius: 20px; /* Reduced border-radius */
+}
+
+.itsjp-slider.round:before {
+  border-radius: 50%;
+}
+/* Switch style input checkbox ends here */
+
+/* Alert */
+#itsjp-alert-container {
+  position: fixed;
+  top: 40px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.itsjp-alert {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.itsjp-icon-message {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.itsjp-icon-message .material-icons {
+  font-size: 24px; /* Adjust the icon size as needed */
+  vertical-align: middle; /* Align icon middle */
+  margin-right: 8px; /* Space between icon and message */
+}
+
+.itsjp-close-btn {
+  cursor: pointer;
+  padding: 0 10px;
+  font-size: 20px;
+  line-height: 20px;
+  align-self: flex-start; /* Ensure close button aligns at the start */
+}
+
+.itsjp-success {
+  background-color: #d4edda;
+  color: #155724;
+  border-color: #c3e6cb;
+}
+
+.itsjp-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-color: #f5c6cb;
+}
+
+.itsjp-notice {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border-color: #bee5eb;
+}
+
+.itsjp-show {
+  display: flex;
+}
